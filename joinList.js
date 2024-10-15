@@ -12,6 +12,22 @@
 // Write our function (we must define it too!) below
 // ...
 
+const joinList = function(words) {
+  // loop through the array to get the values in the array
+  // initialize the string we will return. This will also return an empty string if the array is empty.
+  let string = "";
+  for (const word of words) {
+    // if string is not empty, add a comma
+    if (string) {
+      string += ", ";
+    }
+    // add the word to the sentence
+    string += `${word}`;
+  }
+  // return the new string
+  return (string);
+};
+
 // Test / Driver Code below...
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
 const concepts = joinList(conceptList);
